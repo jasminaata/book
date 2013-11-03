@@ -43,10 +43,11 @@
         <div class='email-container inner'>
           <div class='description'>Let me know when the book is ready!</div>
           <div class='email-wrapper line'>
-            <!--<div class="inner">-->
-            <input class='email-text-box unit' type='text' name='email' placeholder='e-mail address'/>
-            <input class="go-button unit" type="submit" name='go' value='GO' />
-            <!--</div>-->
+
+            <%= form_for @subscriber do |f| %>
+              <%= f.text_field :email, class: "email-text-box unit", placeholder: 'e-mail address' %>
+              <%= f.submit "Go", class: "subscribe-button unit" %>
+            <% end %>
           </div>
         </div>
       </div>
