@@ -1,5 +1,17 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class='main bg-img'>
-  <div class="inner">
+  <div class="bottom-inner">
+    <div class="top-bar">Full-length book this December...</div>
+  </div>
+  <div class="left-inner">
 
     <div class='container'>
       <div class='title inner'>From Felony to Six Figures</div>
@@ -17,15 +29,23 @@
         This story is about rebuilding, about completely changing my situation over the course of a decade. It's about
         learning to lead by example.
       </div>
-      <hr/>
-      <div class="buttons inner">Like button here</div>
+      <div class="horizontal-inner">
+        <hr/>
+      </div>
+      <div class="buttons inner">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+      </div>
       <div class="subscribe">
         <div class='email-container inner'>
           <div class='description'>Let me know when the book is ready!</div>
           <div class='email-wrapper line'>
             <!--<div class="inner">-->
-              <input class='email-text-box unit' type='text' name='email' placeholder='e-mail address'/>
-              <input class="go-button unit" type="submit" name='go' value='GO' />
+            <input class='email-text-box unit' type='text' name='email' placeholder='e-mail address'/>
+            <input class="go-button unit" type="submit" name='go' value='GO' />
             <!--</div>-->
           </div>
         </div>

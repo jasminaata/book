@@ -1,3 +1,5 @@
+$space: 10px;
+
 .unit { float: left }
 
 .line { width: 100% }
@@ -7,4 +9,10 @@
 .size8of10 { width: 80% }
 .size9of10 { width: 90% }
 
-.inner { padding: 10px }
+.inner { padding: $space }
+.horizontal-inner { 
+  padding-left: $space; 
+  padding-right: $space; 
+}
+.bottom-inner { padding-bottom: 5 * $space }
+.left-inner { padding-left: 2 * $space }
