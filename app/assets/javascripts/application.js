@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require dashboard
+//= require facebook_buttons
+//= require twitter_button

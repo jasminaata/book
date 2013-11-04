@@ -1,12 +1,4 @@
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <div class='main bg-img'>
   <div class="bottom-inner">
     <div class="top-bar">Full-length book this December...</div>
@@ -16,41 +8,53 @@
     <div class='container'>
       <div class='title inner'>From Felony to Six Figures</div>
       <div class='sub-title inner'>An ex-convict's journey to and through Silicon Valley</div>
-      <div class='overview inner'>I am the chief technology officer of a multi million pound (£) business in London.
+      <div class='overview inner'>
+        <p>
+          I am the chief technology officer of a multi million pound (£) business in London.
         Before accepting my role here, I built a $1.1 billion dollar company in San Francisco. Before that I worked for
         the federal government of the United States. I've travelled the world. I've married the woman of my dreams,
         made enough money to retire at the age of 30. But before all this, I was convicted of a felony when I was 18.
         The crime? I put my father in a coma.
+        </p>
 
-        After prison this left me homeless, unemployed, uneducated in the vast plains of scarce opportunities in
+        <p> 
+          After prison this left me homeless, unemployed, uneducated in the vast plains of scarce opportunities in
         Oklahoma, in debt $17000 to the Department of Corrections, and inches away from going to prison again. This
         time for ten years.
+        </p>  
 
-        This story is about rebuilding, about completely changing my situation over the course of a decade. It's about
+        <p>
+          This story is about rebuilding, about completely changing my situation over the course of a decade. It's about
         learning to lead by example.
+        </p>  
       </div>
       <div class="horizontal-inner">
         <hr/>
       </div>
       <div class="buttons inner">
         <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-        <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-        </script>
         <div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
       </div>
-      <div class="subscribe">
-        <div class='email-container inner'>
-          <div class='description'>Let me know when the book is ready!</div>
-          <div class='email-wrapper line'>
+      <div class="inner">
+        <%= content_tag(:div, flash[:success], class: 'notice success') if flash[:success] %>
+      </div>
+      <% if !@subscriber.valid? %>
+      <div class="inner">
+        <%= content_tag(:div, flash[:error], class: 'notice error') if flash[:error] %>
+      </div>
+        <div class="subscribe">
+          <div class='email-container inner'>
+            <div class='description'>Let me know when the book is ready!</div>
+            <div class='email-wrapper line'>
 
-            <%= form_for @subscriber do |f| %>
+              <%= form_for @subscriber do |f| %>
               <%= f.text_field :email, class: "email-text-box unit", placeholder: 'e-mail address' %>
               <%= f.submit "Go", class: "subscribe-button unit" %>
-            <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

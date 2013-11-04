@@ -3,9 +3,8 @@ Book::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'dashboard#index'
-  resources :subscribers, only: :create
-  # post "/subscribe" => 'subscribers#create'
+  root 'application#index'
+  resources :subscribers, only: [:create, :index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

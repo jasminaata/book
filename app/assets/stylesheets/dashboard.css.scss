@@ -16,7 +16,8 @@ body {
 }
 
 .bg-img {
-  background-image: url(https://launchrock-assets.s3.amazonaws.com/background-files/IW715G4F_1376984702451.jpg?_=0);
+  /*background-image: url(https://launchrock-assets.s3.amazonaws.com/background-files/IW715G4F_1376984702451.jpg?_=0);*/
+  background-image: url('../images/background.png');
   background-size: cover;
 }
 
@@ -29,15 +30,35 @@ body {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   }
 
+.notice {
+  &.success {
+    padding: 8px 35px 8px 14px; 
+    background-color: #85DA63; 
+    border: 1px solid rgb(214, 233, 198); 
+    color: #2C5C19;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include round-corners;
+  }
+
+  &.error {
+    padding: 8px 35px 8px 14px; 
+    background-color: #F07C6C; 
+    border: 1px solid rgb(238, 211, 215); 
+    color: #9B100E;
+    font-weight: bold;
+    @include round-corners;
+  }
+}
+
 .container {
   width: 400px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(13, 130, 227, 0.9);
   color: white;
   text-align: center;
   @include round-corners;
   font-size: 14px;
   font-weight: 300;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 
   .title {
     font-size: 2em;
@@ -73,7 +94,7 @@ body {
     font-size: 17px;
   }
 
-  .go-button {
+  .subscribe-button {
     &:hover {
       background-image: linear-gradient(to bottom, #168B47, #168B47);
     };
