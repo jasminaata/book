@@ -17,3 +17,9 @@
 //= require dashboard
 //= require facebook_buttons
 //= require twitter_button
+
+$(window).load(function() {
+  if( $(".notice.success").html()) {
+    $(".subscribe").remove();
+  };
+});
